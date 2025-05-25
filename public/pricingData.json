@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Starter",
+    "price": "$20/month",
+    "description": "For those new to the gym, focused on staying active.",
+    "features": [
+      "Access to gym equipment",
+      "Locker room access",
+      "1 group class per week",
+      "Free Wi-Fi",
+      "Open 6 AM – 10 PM",
+      "Fitness assessment (once every 6 months)"
+    ],
+    "buttonText": "Join Starter",
+    "highlight": false
+  },
+  {
+    "title": "Active",
+    "price": "$40/month",
+    "description": "For regular gym-goers who want more flexibility.",
+    "features": [
+      "Everything in Starter",
+      "Unlimited group classes",
+      "Sauna and steam room access",
+      "1 guest pass per month",
+      "Open 24/7",
+      "Monthly body composition analysis",
+      "Access to virtual fitness classes"
+    ],
+    "buttonText": "Choose Active",
+    "highlight": true
+  },
+  {
+    "title": "Elite",
+    "price": "$70/month",
+    "description": "For dedicated athletes seeking full access and perks.",
+    "features": [
+      "Everything in Active",
+      "1 personal training session/month",
+      "Nutrition consultation",
+      "Priority support",
+      "Access to all branches",
+      "Exclusive member events",
+      "Free gym merchandise (T-shirt & water bottle)"
+    ],
+    "buttonText": "Upgrade to Elite",
+    "highlight": false
+  }
+]
