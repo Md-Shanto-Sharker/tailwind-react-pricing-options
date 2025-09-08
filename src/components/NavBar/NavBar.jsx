@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "./Link";
+import { Menu, X } from "lucide-react";
 
 const navigationData = [
   {
@@ -30,22 +31,36 @@ const navigationData = [
 ];
 
 const NavBar = () => {
+  const links = navigationData.map((route) => <Link route={route}></Link>);
+  const [open, setOpen] = useState(false);
   return (
-    <nav>
-      <ul className="flex">
-        {navigationData.map((route) => (
-            <Link  route={route}></Link>
-         
-        ))}
-      </ul>
+    <>
+      <nav className="flex justify-between mx-10">
+        <span className="flex" onClick={() => setOpen(!open)}>
+          {open ? <X className="md:hidden" /> : <Menu className="md:hidden" />}
 
-      {/* <ul className="flex">
+          <ul
+            className={`md:hidden absolute duration-1000
+          ${open ? "top-8" : "-top-40"}
+          bg-amber-300`}
+          >
+            {links}
+          </ul>
+
+          <h3 className="ml-4">My Navbar</h3>
+        </span>
+        <ul className="md:flex hidden ">{links}</ul>
+
+        {/* <ul className="flex">
         {navigationData.map((route) => (
             <li className="mr-10"><a href={route.path}>{route.name}</a></li>
          
         ))}
       </ul> */}
-    </nav>
+
+        <button>Sign In</button>
+      </nav>
+    </>
   );
 };
 
